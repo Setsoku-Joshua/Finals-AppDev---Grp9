@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Login Dropdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <div class="navbar-nav">
+            <a href="market.html" class="nav-item nav-link active">Market</a>
+            <a href="build-pc.html" class="nav-item nav-link">Build a PC</a>
+            <a href="support.html" class="nav-item nav-link">Support</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+        </div>
+        <div class="login-container">
+            <div class="login-icon" onclick="toggleLoginDropdown()">Login</div>
+            <div class="login-dropdown" id="loginDropdown">
+                <div class="dropdown-header">
+                    <span>Login</span>
+                    <button class="close-btn" onclick="closeDropdown()">X</button>
+                </div>
+                <div id="loginFormContainer">
+                    <form id="loginForm" onsubmit="return handleLogin(event)">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="userMenu" style="display: none;">
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">My Rewards</a></li>
+                        <li><a href="#">My Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script src="script.js"></script>
+</body>
+</html>
