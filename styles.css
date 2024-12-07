@@ -9,42 +9,76 @@ body {
     color: white;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
-    position: relative;
-}
-
-.logo {
-    color: white;
-    font-size: 20px;
-    margin-right: auto;
-}
-
-.navbar-nav {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
 }
 
 .navbar .nav-link {
-    text-align: center;
-    padding: 10px 15px;
     color: white;
     text-decoration: none;
+    margin: 0 10px;
 }
 
 .navbar .nav-link:hover {
     color: #ddd;
 }
 
+.header {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.header .announcement {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.header .search-bar input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4a261;
+}
+
+.placeholder-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer-section {
+    margin: 0 10px;
+}
+
 .login-container {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    position: relative;
+    display: inline-block;
 }
 
 .login-icon {
     cursor: pointer;
-    padding: 10px;
+    padding: 5px 10px;
     background-color: #444;
     color: white;
     border-radius: 5px;
@@ -55,17 +89,29 @@ body {
 }
 
 .login-dropdown {
-    display: none;
+    display: none; /* Hidden by default */
     position: absolute;
-    top: 40px;
+    top: 40px; /* Adjust as needed to align below the icon */
     right: 0;
     background-color: white;
     color: black;
     border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.header-text1{
+    display: flex;
+    align-items: center;
+}
+
+.header-text2{
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 
 .dropdown-header {
@@ -87,9 +133,21 @@ body {
     color: red;
 }
 
+#loginFormContainer,
+#userMenu {
+    margin-top: 10px;
+}
+
+#loginFormContainer label,
+#loginFormContainer input {
+    display: block;
+    margin: 5px 0;
+}
+
 #userMenu ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 #userMenu li {
@@ -103,4 +161,45 @@ body {
 
 #userMenu a:hover {
     text-decoration: underline;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px; /* Adjust spacing between images */
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.grid-image {
+    width: 300px; /* Increased size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container a {
+    text-decoration: none;
+    color: #333;
+}
+
+.image-container a:hover p {
+    color: #007bff;
+}
+
+.image-container p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
