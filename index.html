@@ -3,47 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar with Login Dropdown</title>
+    <title>TNC PC Warehouse</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" role="status"></div>
-    </div>
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">MyWebsite</div>
+        <div class="logo">TNC PC Warehouse</div>
         <div class="navbar-nav">
-            <a href="market.html" class="nav-item nav-link active">Market</a>
-            <a href="build-pc.html" class="nav-item nav-link">Build a PC</a>
-            <a href="support.html" class="nav-item nav-link">Support</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="market.html" class="nav-link">Market</a>
+            <a href="build-pc.html" class="nav-link">Build a PC</a>
+            <a href="support.html" class="nav-link">Support</a>
+            <a href="about.html" class="nav-link">About</a>
         </div>
-        <div class="login-container">
-            <div class="login-icon" onclick="toggleLoginDropdown()">Login</div>
-            <div class="login-dropdown" id="loginDropdown">
-                <div class="dropdown-header">
-                    <span>Login</span>
-                    <button class="close-btn" onclick="closeDropdown()">X</button>
+        <div class="icons">
+            <div class="login-container">
+                <div class="login-icon" onclick="toggleLoginDropdown()">👤</div>
+                <div class="login-dropdown" id="loginDropdown">
+                    <div class="dropdown-header">
+                        <span id="loginText">Account</span>
+                        <button class="close-btn" onclick="closeDropdown()">X</button>
+                    </div>
+                    <div id="loginFormContainer">
+                        <form id="loginForm" onsubmit="return handleLogin(event)">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div id="userMenu" style="display: none;">
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">My Rewards</a></li>
+                            <li><a href="#">My Cart</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="loginFormContainer">
-                    <form id="loginForm" onsubmit="return handleLogin(event)">
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" required>
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-                <div id="userMenu" style="display: none;">
-                    <ul>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">My Rewards</a></li>
-                        <li><a href="#">My Cart</a></li>
-                    </ul>
+                
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="announcement">
+            <p>Showing discounted items when first opening the page. Updates every 10 seconds.</p>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="main-section">
+            <div class="filler-content">
+<div class="header-text1">
+    <h2>Welcome to TNC PC Warehouse</h2>
+</div>
+<div class="header-text2">
+    <p>Explore our services and products below:</p>
+</div>
+
+                <div class="image-grid">
+                    <div class="image-container">
+                        <a href="market.html">
+                            <img src="images/tn1.png" alt="Market" class="grid-image">
+                            <p>Shop in Market</p>
+                        </a>
+                    </div>
+                    <div class="image-container">
+                        <a href="build-pc.html">
+                            <img src="images/tn2.png" alt="Build a PC" class="grid-image">
+                            <p>Build Your PC</p>
+                        </a>
+                    </div>
+                    <div class="image-container">
+                        <a href="build-pc.html">
+                            <img src="images/tn2.png" alt="Build a PC" class="grid-image">
+                            <p>Build Your PC</p>
+                        </a>
+                    </div>
+
+                    <div class="image-container">
+                        <a href="build-pc.html">
+                            <img src="images/tn2.png" alt="Build a PC" class="grid-image">
+                            <p>Build Your PC</p>
+                        </a>
+                    </div>
+
+                    <div class="image-container">
+                        <a href="build-pc.html">
+                            <img src="images/tn2.png" alt="Build a PC" class="grid-image">
+                            <p>Build Your PC</p>
+                        </a>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-section">
+            <p>TNC Group of Companies</p>
+            <p>2024 Copyright</p>
         </div>
-    </nav>
+        <div class="footer-section">
+            <p>Contact Us:</p>
+            <ul>
+                <li>TikTok, Facebook, Instagram, YouTube Links</li>
+                <li>Email: business@tnc.com.ph</li>
+                <li>Address: 3rd Floor, Filomena Bldg, Quezon City</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <p>Call Us:</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
