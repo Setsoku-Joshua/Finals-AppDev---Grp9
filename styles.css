@@ -94,9 +94,9 @@ body {
 
 .image-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: center;
-    gap: 75px;
+    gap: 50px; 
     margin-top: 40px;
     padding: 0 20px;
 }
@@ -106,20 +106,21 @@ body {
 }
 
 .grid-image {
-    width: 300px;
-    height: auto;
+    width: 500px; 
+    height: 500px; 
+    object-fit: cover; 
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid-image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .image-container p {
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -235,3 +236,4 @@ footer {
 #userMenu a:hover {
     text-decoration: underline;
 }
+
