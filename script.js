@@ -13,20 +13,22 @@ function handleLogin(event) {
 
     const username = document.getElementById('username').value;
     if (username) {
-        // Hide the login form and "Login" text
+        // Hide the login form and show the user menu
         document.getElementById('loginFormContainer').style.display = 'none';
-        document.getElementById('loginText').style.display = 'none';
-
-        // Show the user menu
         const userMenu = document.getElementById('userMenu');
         userMenu.style.display = 'block';
 
         // Optionally update the login icon text
         const loginIcon = document.querySelector('.login-icon');
         loginIcon.textContent = `Welcome, ${username}`;
+
+        // Hide the "Login" text in the dropdown
+        const loginText = document.querySelector('.dropdown-header span');
+        loginText.style.display = 'none';
     }
     return false;
 }
+
 const announcements = [
     "Discounted item 1 available now!",
     "Free shipping on orders above $50!",
