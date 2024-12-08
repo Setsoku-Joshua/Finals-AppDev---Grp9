@@ -55,7 +55,9 @@
     <header class="header">
         <!-- Advertisement Section -->
         <div class="advertisement-banner">
+            <button class="arrow left-arrow" onclick="changeBanner(-1)">&#10094;</button>
             <img id="bannerImage" src="images/banner1.jpg" alt="Advertisement Banner">
+            <button class="arrow right-arrow" onclick="changeBanner(1)">&#10095;</button>
             <div class="dots">
                 <span class="dot" data-index="0"></span>
                 <span class="dot" data-index="1"></span>
@@ -63,7 +65,7 @@
                 <span class="dot" data-index="3"></span>
                 <span class="dot" data-index="4"></span>
             </div>
-        </div>        
+        </div> 
         
         <div class="announcement">
             <p>Showing discounted items when first opening the page. Updates every 10 seconds.</p>
