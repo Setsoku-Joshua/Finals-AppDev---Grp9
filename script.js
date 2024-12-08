@@ -117,3 +117,8 @@ dots.forEach(dot => {
 // Initialize the first active dot
 updateBanner();
 
+function changeBanner(direction) {
+    // Adjust the current index based on direction (-1 for left, 1 for right)
+    currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+    updateBanner(); // Update the banner image and active dot
+}
