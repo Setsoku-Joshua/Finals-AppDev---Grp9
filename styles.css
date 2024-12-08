@@ -7,8 +7,9 @@ body {
 }
 
 /* Navbar */
+
 .navbar {
-    background-color: #333;
+    background-color: #000000;
     color: white;
     display: flex;
     align-items: center;
@@ -22,28 +23,22 @@ body {
 }
 
 .logo-image {
-    width: 50px;
-    height: 50px;
-    margin-right: 2px;
-    border-radius: 30%;
-}
-
-.logo-text {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
+    width: 80px; 
+    height: auto; 
+    margin-right: 0; 
+    border-radius: 10%;
 }
 
 .navbar-nav {
     display: flex;
-    justify-content: center;  
-    flex-grow: 1;  
+    justify-content: center;
+    flex-grow: 1;
+    gap: 20px;
 }
 
 .nav-link {
     color: white;
     text-decoration: none;
-    margin: 0 15px;  
     font-size: 18px;
     transition: color 0.3s ease, border-bottom 0.3s ease;
 }
@@ -53,6 +48,17 @@ body {
     text-decoration: underline;
     border-bottom: 2px solid orange;
 }
+
+.logo-link {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 
 
 
@@ -126,7 +132,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -202,12 +208,36 @@ footer {
 .advertisement-banner {
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .advertisement-banner img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width */
+    height: 400px; /* Set a fixed height */
+    object-fit: cover; /* Ensures all images are cropped to fit while maintaining aspect ratio */
     border-radius: 10px;
+    transition: opacity 0.3s ease; /* Smooth transition for image changes */
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: orange;
 }
 
 /* Form and User Menu */
@@ -237,3 +267,22 @@ footer {
     text-decoration: underline;
 }
 
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: orange;
+}
