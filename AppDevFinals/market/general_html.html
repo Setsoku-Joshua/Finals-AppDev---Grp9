@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNC PC Warehouse</title>
+    <link rel="stylesheet" href="general_css.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="#" class="logo-link">
+                <img src="images/logo.png" alt="TNC Logo" class="logo-image">
+            </a>
+        </div>
+        
+        
+        <div class="navbar-nav">
+            <a href="market.html" class="nav-link">Market</a>
+            <a href="build-pc.html" class="nav-link">Build a PC</a>
+            <a href="support.html" class="nav-link">Support</a>
+            <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="icons">
+            <div class="login-container">
+                <div class="login-icon" onclick="toggleLoginDropdown()">Login</div>
+                <div class="login-dropdown" id="loginDropdown">
+                    <div class="dropdown-header">
+                        <span id="loginText">Account</span>
+                        <button class="close-btn" onclick="closeDropdown()">X</button>
+                    </div>
+                    <div id="loginFormContainer">
+                        <form id="loginForm" onsubmit="return handleLogin(event)">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div id="userMenu" style="display: none;">
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">My Rewards</a></li>
+                            <li><a href="#">My Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Advertisement Section -->
+        <div class="advertisement-banner">
+            <button class="arrow left-arrow" onclick="changeBanner(-1)">&#10094;</button>
+            <img id="bannerImage" src="images/banner1.jpg" alt="Advertisement Banner">
+            <button class="arrow right-arrow" onclick="changeBanner(1)">&#10095;</button>
+            <div class="dots">
+                <span class="dot" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+            </div>
+        </div> 
+        
+        <div class="announcement">
+            <p>Showing discounted items when first opening the page. Updates every 10 seconds.</p>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="main-section">
+            <div class="header-text1">
+                <h2>Welcome to TNC PC Warehouse</h2>
+            </div>
+            <div class="header-text2">
+                <p>Explore our services and products below:</p>
+            </div>
+
+            <div class="image-grid">
+                <div class="image-container">
+                    <a href="market.html">
+                        <img src="images/tn1.png" alt="Market" class="grid-image">
+                        <p>Shop in Market</p>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="build-pc.html">
+                        <img src="images/tn2.png" alt="Build a PC" class="grid-image">
+                        <p>Build Your PC</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-section">
+            <img src="logo" alt="" id="">
+            <p>&copy; 2024 TNCPCWarehouse. All Rights Reserved</p>
+        <div class="socials">
+            <a href="#" target="blank">
+                <img src="images/facebook-fill.png" alt="Announcement"/></a>
+            <a href="#" target="blank">
+                <img src="images/youtube-fill.png" alt="Announcement"/></a>
+            <a href="#" target="blank">
+                <img src="images/twitter-x-line.png" alt="Announcement"/></a>
+        </div>
+    </div>
+        <div class="footer-section">
+            <h2 style="color: #e69138;">Email</h2>
+            <p>business@tnc.com.ph</p>
+            <br>
+            <h2 style="color: #e69138;">Address</h2>
+            <p>3rd Floor, Filomena Bldg. 477 E.<br> 
+            Rodriquez Sr. Ave., Quezon City</p>
+        </div>
+        <div class="footer-section">
+            <h2 style="color: #e69138;">Call Us</h2>
+            <p>Phone Number</p>
+            <p>Telephone Number</p>
+        </div>
+        <div class="footer-section">
+            <h2 style="color: #e69138;">Company</h2>
+            <p>Our Comapany</p>
+            <p>FAQs</p>
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>
+        </div>
+    </footer>
+    <script src="general_jst.js"></script>
+</body>
+</html>

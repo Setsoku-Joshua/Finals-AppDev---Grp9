@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color:  #e69138;
+  height: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* Main Navigation */
+.navone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px 30px;
+  min-height: 80px;
+}
+
+#img{
+  width: 50px
+}
+
+.navone .search input {
+  width: 500px;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navone .search input:focus {
+  border-color: #e69138;
+}
+
+.navone .cart{
+  display: flex;
+  gap: 20px;
+}
+
+#img-2{
+  width: 28px;
+  margin-left: 20px;
+}
+
+/* Header */
+#announcement-image{
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.fade .announcement {
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1.5s;
+  animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* Navigation Two */
+.navtwo {
+  background-color: black;
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  position: sticky;
+  top: 0;
+}
+
+.navtwo ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0;
+}
+
+.navtwo ul li {
+  color: #e69138;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  margin: auto;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  min-width: 20%;
+  border: 1px solid black;
+  background-color: #f6b26b;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 15px;
+}
+  
+.filter-section h2 {
+  margin-top: 0;
+}
+  
+.filter-section ul {
+  list-style: none;
+  padding: 0;
+}
+  
+.filter-section li {
+  margin: 10px 0;
+}
+
+.price-filter {
+  margin-bottom: 20px;
+}
+  
+.price-filter label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+  
+.price-filter input[type="range"] {
+  width: 90%;
+  margin: 10px 0;
+}
+  
+.price-filter input[type="text"] {
+  width: 90%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#confirmPriceButton {
+  padding: 10px 15px;
+  background-color: blue;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+  
+#confirmPriceButton:hover {
+  background-color: #0056b3;
+}
+
+.section {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 90%;
+}
+
+.card {
+  border: 1px solid black;
+  overflow: hidden;
+  background-color: #f6b26b;
+  text-align: center;
+  min-width: 30%;
+}
+  
+.img-placeholder {
+  background-color: white;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#product-img {
+  max-width: 70%;
+  height: 70%;
+}
+  
+.card-content {
+    padding: 16px;
+}
+  
+.card-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+  
+.card-content .price {
+    margin: 8px 0;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+  
+.stars {
+    margin: 8px 0;
+    font-size: 18px;
+    color: gold;
+}
+  
+.buy-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+  
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  height: auto;
+  flex-wrap: wrap;
+}
+.footer-section {
+  margin: 5px;
+  text-align: left;
+  font-size: 15px;
+}
+.footer-section .socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 8px;
+}
+.footer-section .socials a {
+  border: 1px solid #e69138;
+  padding: 8px 8px;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+.footer-section .socials a:hover {
+  background-color: #e69138;
+}
+.footer-section .socials img{
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 1110px) {
+  .card-content .stars{
+    font-size: 14px;
+  }
+  .buy-button{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .navone .search input {
+    width: 400px;
+  }
+
+  .navtwo ul li {
+    font-size: 12px;
+  }
+
+  .footer-section {
+    font-size: 12px;
+  }
+
+  .card-content h3 {
+    font-size: 14px;
+  }
+
+  .card-content .price {
+    font-size: 16px;
+  }
+
+  .section {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 850px) {
+  .navone .search input {
+    width: 300px;
+  }
+
+  .card-content h3 {
+    font-size: 14px;
+  }
+
+  .card-content .price {
+    font-size: 16px;
+  }
+
+  .card-content .stars {
+    font-size: 14px;
+  }
+
+  .footer-section {
+    font-size: 10px;
+  }
+
+  .footer-section .socials {
+    font-size: 5px;
+  }
+
+  .announcement img {
+    height: 100%;
+  }
+  .section {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .navone .search input {
+    width: 200px;
+  }
+
+  .filter-section {
+    font-size: 12px;
+  }
+
+  .footer-section {
+    font-size: 8px;
+  }
+
+  .footer-section .socials {
+    font-size: 2px;
+  }
+
+  .section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .navone .search input {
+    width: 100%;
+    height: 28px;
+  }
+
+  #img {
+    width: 30px;
+  }
+
+  .navone .cart {
+    gap: 10px;
+  }
+
+  #img-2 {
+    width: 18px;
+  }
+
+  .footer-section {
+    font-size: 5px;
+  }
+
+  .footer-section .socials {
+    font-size: 2px;
+  }
+
+  .footer-section .socials a {
+    border: 1px solid #e69138;
+    padding: 5px 5px;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+
+  .footer-section .socials img {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media (max-width: 375px) {
+  .footer-section .socials img {
+    width: 8px;
+    height: 8px;
+  }
+}

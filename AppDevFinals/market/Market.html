@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Mockup</title>
+    <link rel="stylesheet" href="Market.css">
+</head>
+<body>
+  <!--Main Navigation-->
+    <nav class=navone>
+        <div class="logo">
+          <a href="#" target="_self">
+            <img src="TNC_2020_Logo_Portrait_1.png" id="img">
+          </a>
+          </div>
+        <div class="search">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="cart">
+            <a href="#" target="_self"><img src="user-fill (1).png" alt="Cart Icon" id="img-2"></a>
+            <a href="#" target="_self"><img src="shopping-bag-4-fill.png" alt="Cart Icon" id="img-2"></a>
+        </div>
+    </nav>
+
+  <!--Header-->
+    <header>
+    <div class="fade">
+    <div class="announcement">
+        <a href="#" target="blank">
+            <img id="announcement-image" src="Ad Banner 2.jpg" alt="Announcement"/>
+        </a>
+    </div>
+    </div>
+    <div class="fade">
+    <div class="announcement">
+        <a href="#" target="blank">
+            <img id="announcement-image" src="cat-dog-hats (1).jpg" alt="Announcement"/>
+        </a>
+    </div>
+    </div>
+    <div class="fade">
+    <div class="announcement">
+        <a href="#" target="blank">
+            <img id="announcement-image" src="Ad Banner 3.jpg" alt="Announcement"/>
+        </a>
+    </div>
+    </div>
+    </header>
+    
+  <!--Second Navigation-->
+    <nav class="navtwo">
+        <ul>
+            <a href="Market.html" target="_self"><li>Market</li></a>
+            <a href="#" target="_self"><li>Build A PC</li></a>
+            <a href="#" target="_self"><li>Support</li></a>
+            <a href="#" target="_self"><li>About</li></a>
+        </ul>
+    </nav>
+
+  <!--Market Page-->
+    <main>
+        <div class="filter-section">
+          <div class="price-filter">
+            <label>Price Range</label>
+            <div class="slider-container">
+              <input type="range" id="priceRange" min="0" max="200000" step="1000" value="25000" oninput="updatePriceValue(this)">
+              <span id="priceValue">₱25,000.00</span>
+            </div>
+                <label for="specificPrice">Specific Price:</label>
+                <input type="text" id="specificPrice" placeholder="Enter specific price">
+            </div>
+        <ul>
+            <li><label><input type="checkbox" value="Motherboard"> Motherboard </label></li>
+            <li><label><input type="checkbox" value="CPU"> CPU </label></li>
+            <li><label><input type="checkbox" value="GPU"> GPU </label></li>
+            <li><label><input type="checkbox" value="RAM"> RAM </label></li>
+            <li><label><input type="checkbox" value="Case"> Case </label></li>
+            <li><label><input type="checkbox" value="Storage"> Storage </label></li>
+            <li><label><input type="checkbox" value="Power Supply"> Power Supply </label></li>
+            <li><label><input type="checkbox" value="Operating System"> Operating System </label></li>
+            <li><label><input type="checkbox" value="Cooler"> Cooler </label></li>
+            <li><label><input type="checkbox" value="Peripherals"> Peripherals </label></li>
+            <li><label><input type="checkbox" value="Expansion Cards"> Expansion Cards </label></li>
+            <li><label><input type="checkbox" value="Other Accessories"> Other Accessories </label></li>
+        </ul>
+        <button id="confirmPriceButton" onclick="confirmPrice()">Apply</button>
+        </div>
+        <div class="section">
+            <div class="card" data-category="CPU" data-price="11494">
+                <div class="img-placeholder">
+                  <a href="Product_CPU2.html" target="_self">
+                  <img src="Intel i5.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>Intel Core i5-13400F</h3>
+                  <p class="price">₱11,494.22</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card"  data-category="CPU" data-price="7213">
+                <div class="img-placeholder">
+                  <a href="Product_CPU1.html" target="_self">
+                  <img src="AMD Ryzen 5.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>AMD Ryzen 5 5600X</h3>
+                  <p class="price">₱7,213.21</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card"  data-category="GPU" data-price="58644">
+                <div class="img-placeholder">
+                  <a href="Product_GPU2.html" target="_self">
+                  <img src="AMD 7900.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>AMD Radeon RX 7900 XTX</h3>
+                  <p class="price">₱58,644.00</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card"  data-category="GPU" data-price="69300">
+                <div class="img-placeholder">
+                  <a href="Product_GPU1.html" target="_self">
+                  <img src="RTX 4080.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>NVIDIA GeForce RTX 4080</h3>
+                  <p class="price">₱69,300.00</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card" data-category="RAM" data-price="7330">
+                <div class="img-placeholder">
+                  <a href="Product_RAM1.html" target="_self">
+                  <img src="Trident Z5.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>G.Skill Trident Z5 RGB 32 GB DDR5-7200</h3>
+                  <p class="price">₱7,330.50</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card" data-category="RAM" data-price="2111">
+                <div class="img-placeholder">
+                  <a href="Product_RAM2.html" target="_self">
+                  <img src="Ripjaws V.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>G.Skill Ripjaws V 16 GB DDR4-3600</h3>
+                  <p class="price">₱2,111.18</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card" data-category="Case" data-price="6450">
+                <div class="img-placeholder">
+                  <a href="Product_Case1.html" target="_self">
+                  <img src="Corsair 3500x.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>Corsair 3500X ARGB</h3>
+                  <p class="price">₱6,450.84</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card" data-category="Case" data-price="4105">
+                <div class="img-placeholder">
+                  <a href="Product_Case2.html" target="_self">
+                  <img src="Lian li A3.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>Lian Li DAN A3-mATX</h3>
+                  <p class="price">₱4,105.08</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card" data-category="Storage" data-price="4808">
+              <div class="img-placeholder">
+                <a href="Product_Storage1.html" target="_self">
+                <img src="Acer GM7000.png" alt="" id="product-img">
+                </a>
+              </div>
+              <div class="card-content">
+                <h3>Acer Predator GM7000</h3>
+                <p class="price">₱4,808.81</p>
+                <div class="stars">
+                  <span>⭐</span>
+                  <span>⭐</span>
+                  <span>⭐</span>
+                  <span>⭐</span>
+                  <span>⭐</span>
+                 </div>
+                <button class="buy-button">ADD TO CART</button>
+              </div>
+          </div>
+          <div class="card" data-category="Storage" data-price="3635">
+                <div class="img-placeholder">
+                  <a href="Product_Storage2.html" target="_self">
+                  <img src="Crucial P3.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>Crucial P3</h3>
+                  <p class="price">₱3,635.93</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card" data-category="Power Supply" data-price="8210">
+                <div class="img-placeholder">
+                  <a href="Product_Powersupply1.html" target="_self">
+                  <img src="Corsair 750x.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>Corsair RM750X</h3>
+                  <p class="price">₱8,210.16</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card" data-category="Power Supply" data-price="16713">
+                <div class="img-placeholder">
+                  <a href="Product_Powersupply2.html" target="_self">
+                  <img src="Silver Stone SX1000.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>SilverStone SX1000 Platinum</h3>
+                  <p class="price">₱16,713.54</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card" data-category="Motherboard" data-price="19352">
+                <div class="img-placeholder">
+                  <a href="Product_Motherboard1.html" target="_self">
+                  <img src="ROG STRIX.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>ROG Strix Z790-E Gaming WiFi</h3>
+                  <p class="price">₱19,352.52</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card" data-category="Motherboard" data-price="32136">
+                <div class="img-placeholder">
+                  <a href="Product_Motherboard2.html" target="_self">
+                  <img src="X670E.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>ASRock X670E Taichi</h3>
+                  <p class="price">₱32,136.91</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+              <div class="card" data-category="Motherboard" data-price="13488">
+                <div class="img-placeholder">
+                  <a href="Product_Motherboard3.html" target="_self">
+                  <img src="AORUS ELITE.png" alt="" id="product-img">
+                  </a>
+                </div>
+                <div class="card-content">
+                  <h3>GIGABYTE Z790 AORUS Elite AX</h3>
+                  <p class="price">₱13,488.12</p>
+                  <div class="stars">
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                   </div>
+                  <button class="buy-button">ADD TO CART</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+
+  <!--Footer-->
+    <footer>
+        <div class="footer-section">
+            <img src="logo" alt="" id="">
+            <p>&copy; 2024 TNCPCWarehouse. All Rights Reserved</p>
+        <div class="socials">
+            <a href="#" target="blank">
+                <img src="facebook-fill.png" alt="Announcement"/></a>
+            <a href="#" target="blank">
+                <img src="youtube-fill.png" alt="Announcement"/></a>
+            <a href="#" target="blank">
+                <img src="twitter-x-line.png" alt="Announcement"/></a>
+        </div>
+    </div>
+        <div class="footer-section">
+            <h2 style="color: #e69138;">Email</h2>
+            <p>business@tnc.com.ph</p>
+            <br>
+            <h2 style="color: #e69138;">Address</h2>
+            <p>3rd Floor, Filomena Bldg. 477 E.<br> 
+            Rodriquez Sr. Ave., Quezon City</p>
+        </div>
+        <div class="footer-section">
+            <h2 style="color: #e69138;">Call Us</h2>
+            <p>Phone Number</p>
+            <p>Telephone Number</p>
+        </div>
+        <div class="footer-section">
+            <h2 style="color: #e69138;">Company</h2>
+            <p>Our Comapany</p>
+            <p>FAQs</p>
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>
+        </div>
+    </footer>
+    <script src="Market.js"></script>
+</body>
+</html>

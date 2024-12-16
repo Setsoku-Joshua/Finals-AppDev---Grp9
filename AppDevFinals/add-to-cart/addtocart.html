@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart Layout</title>
+  <style>
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ff730b;
+  font-size: 18px; /* Increase body font size */
+}
+
+/* Center the container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Layout */
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 1500px; /* Increase max-width for larger layout */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Increase shadow for better visibility */
+  overflow: hidden;
+}
+
+/* Left Section (Products) */
+.products {
+  flex: 2;
+  padding: 30px; /* Increase padding */
+  border-right: 1px solid #ddd;
+}
+
+.products h3 {
+  margin-bottom: 20px; /* Increase margin */
+}
+
+.products table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px; /* Increase bottom margin */
+}
+
+.products table th,
+.products table td {
+  padding: 15px; /* Increase padding */
+  text-align: left;
+}
+
+.products table th {
+  border-bottom: 2px solid #ddd; /* Thicker border */
+}
+
+.products table td {
+  border-bottom: 2px solid #ddd; /* Thicker border */
+}
+
+.products .buttons {
+  display: flex;
+  gap: 15px; /* Increase gap between buttons */
+}
+
+.products .buttons button {
+  padding: 15px 30px; /* Increase button padding */
+  border: none;
+  border-radius: 5px; /* Slightly larger border-radius */
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Button Colors */
+.products .buttons .continue {
+  background-color: #ff730b; /* Tinted Orange */
+}
+
+.products .buttons .clear {
+  background-color: #ff730b; /* Hue Red */
+}
+
+/* Right Section (Order Details) */
+.order-details {
+  flex: 1;
+  padding: 30px; /* Increase padding */
+}
+
+.order-details h3 {
+  margin-bottom: 20px; /* Increase margin */
+}
+
+.order-details textarea {
+  width: 100%;
+  height: 120px; /* Increase height */
+  resize: none;
+  margin-bottom: 30px; /* Increase bottom margin */
+  padding: 15px; /* Increase padding */
+  border: 2px solid #ccc; /* Thicker border */
+  border-radius: 5px; /* Larger border-radius */
+}
+
+.order-details .buttons {
+  display: flex;
+  gap: 15px; /* Increase gap */
+  margin-bottom: 30px; /* Increase margin */
+}
+
+.order-details .buttons button {
+  flex: 1;
+  padding: 15px; /* Increase padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Increase font size */
+}
+
+/* Delivery/Pickup Buttons */
+.order-details .buttons .delivery {
+  background-color: #303030; /* Hue Dark Gray */
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.order-details .buttons .pickup {
+  background-color: #303030; /* Hue Dark Gray */
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.order-details .payment {
+  width: 100%;
+  padding: 15px; /* Increase padding */
+  background-color: #ff730b; /* Tinted Orange */
+  color: #fff;
+  border: none;
+  border-radius: 5px; /* Larger border-radius */
+  cursor: pointer;
+  font-size: 18px; /* Increase font size */
+}
+
+.order-details .total-price {
+  margin-bottom: 15px; /* Increase margin */
+  font-size: 22px; /* Increase font size */
+  font-weight: bold;
+}
+
+/* Highlighted button style */
+.highlighted {
+  background-color: #f15726; /* Hue Red */
+  color: white;  /* White text */
+}
+
+/* Button Active and Focus States */
+button:active, 
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add focus outline */
+}
+
+/* Highlighted state for the Delivery and Pickup buttons */
+#delivery.highlighted,
+#pickup.highlighted {
+  background-color: #ff730b;  /* Tinted Orange */
+  color: white;  /* White text */
+}
+
+/* Active button styling for Delivery/Pickup buttons */
+.delivery:active, 
+.pickup:active {
+  background-color: #070707;  /* Darker Shade on click */
+}
+
+/* Hover effect for Delivery/Pickup buttons */
+.delivery:hover, .pickup:hover {
+  background-color: #ededed; /* Lightened Shade */
+}
+
+.clear:active, .continue:active {
+  background-color: #070707;  /* Darker Shade */
+}
+
+.clear:hover, .continue:hover {
+  background-color: #3f3f3f; /* Darker Gray Hover */
+}
+
+.payment:hover {
+  background-color: #f15726; /* Hue Red Hover */
+}
+
+/* Style for the trash emoji button */
+.remove {
+  background: none;
+  border: none;
+  color: red; /* Red color for trash emoji */
+  font-size: 30px; /* Increase font size */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.remove:hover {
+  color: #ff6f6f; /* Lighter red on hover */
+}
+
+.remove:focus {
+  outline: none;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <!-- Products Section -->
+      <div class="products">
+        <h3>Products</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Product Image</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+       
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> <img src="laptop.jpg" alt="Laptop" width="100" height="100"></td>
+              <td>Sample Product</td>
+              <td>₱100</td>
+              <td>1</td>
+              <td>
+                <button class="remove">X</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="buttons">
+          <button class="continue">Continue Shopping</button>
+          <button class="clear">Clear Cart</button>
+        </div>
+      </div>
+
+      <!-- Order Details Section -->
+      <div class="order-details">
+        <h3>Order Details</h3>
+        <textarea placeholder="Add a note..."></textarea>
+        <div class="buttons">
+          <button id="delivery" class="delivery">Delivery</button>
+          <button id="pickup" class="pickup">Pickup</button>
+        </div>
+        <div class="total-price">Total Price: ₱0.00</div>
+        <button class="payment">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Delivery and Pickup Button functionality with IDs
+      var deliveryButton = document.getElementById('delivery');
+      var pickupButton = document.getElementById('pickup');
+  
+      // Add click event for the Delivery button
+      deliveryButton.addEventListener('click', function() {
+        // Add 'highlighted' to Delivery and remove it from Pickup
+        deliveryButton.classList.add('highlighted');
+        pickupButton.classList.remove('highlighted');
+      });
+  
+      // Add click event for the Pickup button
+      pickupButton.addEventListener('click', function() {
+        // Add 'highlighted' to Pickup and remove it from Delivery
+        pickupButton.classList.add('highlighted');
+        deliveryButton.classList.remove('highlighted');
+      });
+  
+      // Remove Product Button functionality
+      document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('remove')) {
+          const row = e.target.closest('tr');
+          row.remove();
+        }
+      });
+  
+      // Clear Cart Button functionality
+      document.querySelector('.clear').addEventListener('click', function() {
+        const tableBody = document.querySelector('tbody');
+        tableBody.innerHTML = ''; // Clear all rows in the table body
+      });
+
+      // Proceed to Payment Button functionality
+      document.querySelector(".payment").addEventListener("click", function() {
+        // Redirect to the checkout survey page
+        window.location.href = "checkout-survey.html"; // Ensure the file is named correctly
+      });
+    });
+
+    // Continue Shopping Button functionality
+document.querySelector('.continue').addEventListener('click', function() {
+  window.location.href = "market-page.html"; // Replace with your market page URL
+});
+
+  </script>
+</body>
+</html>

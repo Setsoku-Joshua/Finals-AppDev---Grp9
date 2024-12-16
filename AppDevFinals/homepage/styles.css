@@ -1,0 +1,366 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.navone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 30px;
+    min-height: 80px;
+    position: sticky;
+    top: 0;
+    flex-wrap: nowrap;
+    z-index: 1000;
+}
+
+#img {
+    width: 50px;
+}
+
+.navone .search {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navone .search input {
+    width: 100%;
+    max-width: 800px;
+    height: 50px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.navone .search input:focus {
+    border-color: #e69138;
+    box-shadow: 0 0 8px rgba(230, 145, 56, 0.6);
+}
+
+.navone .cart {
+    display: flex;
+    gap: 20px;
+}
+
+#img-2 {
+    width: 28px;
+    margin-left: 20px;
+}
+
+.logo {
+    margin-right: 30px;
+}
+
+.navtwo {
+    background-color: black;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    position: sticky;
+    top: 80px;
+    z-index: 999;
+    flex-wrap: wrap;
+}
+
+.navtwo ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+}
+
+.navtwo ul li {
+    color: #e69138;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.header .announcement,
+.header .search-bar {
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.header .search-bar input {
+    width: 80%;
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4a261;
+    min-width: 300px;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.grid-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.image-container p {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 5px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.footer-section .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 8px;
+}
+
+.footer-section .socials a {
+    border: 1px solid #e69138;
+    padding: 8px 8px;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.footer-section .socials a:hover {
+    background-color: #e69138;
+}
+
+.footer-section .socials {
+    font-size: 5px;
+}
+
+.login-container {
+    position: relative;
+}
+
+.login-icon {
+    cursor: pointer;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.login-icon:hover {
+    background-color: #eeb586;
+}
+
+.login-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    z-index: 1000;
+}
+
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+.placeholder-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.advertisement-banner {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.advertisement-banner img {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: orange;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ff730b;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 115, 11, 0.8);
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .navone .search input {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .navone .cart, .navone .icons {
+        gap: 10px;
+    }
+
+    #img, #img-2 {
+        width: 40px;
+    }
+
+    .navtwo ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navtwo ul li {
+        margin: 10px 0;
+    }
+
+    .main-section {
+        padding: 10px;
+    }
+
+    .image-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .grid-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+}
